@@ -36,7 +36,7 @@ const ExpenseForm: React.FC<Props> = ({ onAdd }) => {
         placeholder="Amount"
         value={amount}
         onChange={(e) => setAmount(parseFloat(e.target.value))}
-        min={0}
+        min={0.00}
         required
       />
       {/* { <label>Date: 
