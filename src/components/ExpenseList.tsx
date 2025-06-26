@@ -14,7 +14,7 @@ const ExpenseList: React.FC<Props> = ({ expenses, setExpenses }) => {
 
   const handleDelete = async (id: number) => {
     try {
-      await fetch(`http://localhost:8080/api/expenses/${id}`, {
+      await fetch(`https://expense-tracker-production-8347.up.railway.app/api/expenses/${id}`, {
         method: 'DELETE',
       });
       setExpenses(expenses.filter(exp => exp.id !== id));
@@ -31,7 +31,7 @@ const ExpenseList: React.FC<Props> = ({ expenses, setExpenses }) => {
 
   const handleSave = async (id: number) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/expenses/${id}`, {
+      const response = await fetch(`https://expense-tracker-production-8347.up.railway.app/api/expenses/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id, description: editedDesc, amount: editedAmount }),
