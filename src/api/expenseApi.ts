@@ -1,6 +1,6 @@
 import { Expense } from "../types/Expense";
 
-const API_URL = "https://expense-tracker-production-8347.up.railway.appapi/expenses";
+const API_URL = "https://expense-tracker-production-8347.up.railway.app/api/expenses";
 
 export const fetchExpenses = async (): Promise<Expense[]> => {
   const response = await fetch(API_URL);
