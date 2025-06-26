@@ -34,7 +34,7 @@ const ExpenseForm: React.FC<Props> = ({ onAdd }) => {
       <input
         type="number"
         step="0.01"
-        min="0.01
+        min="0.01"
         placeholder="Amount"
         value={amount}
         onChange={(e) => setAmount(parseFloat(e.target.value))}
